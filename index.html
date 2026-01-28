@@ -694,6 +694,10 @@
             font-weight: 600;
         }
 
+        .why-content {
+            white-space: pre-line; 
+        }
+
         .ai-case-inline {
             margin: 3rem 0;
             padding: 2rem;
@@ -1146,7 +1150,7 @@
             dateroad: {
                 title: 'DATEROAD',
                 period: '2024.07 - 2024.11',
-                role: 'iOS 파트 리드 (세팅, 다른 파트와의 소통, 파트 관리, 이슈 해결, 자료 제공)\n온보딩 · 로그인 (소셜 & 자동) · 프로필 관리\n메인 화면 · 마이페이지 · 엠티뷰 & 로딩뷰\n코스 및 일정 등록 시 장소 검색',
+                role: 'iOS 파트 리드 (세팅, 다른 파트와의 소통, 파트 관리, 이슈 해결, 자료 제공)\n온보딩 · 로그인 (소셜/자동) · 프로필 관리\n메인 화면 · 마이페이지 · 엠티뷰/로딩뷰\n코스 및 일정 등록 시 장소 검색',
                 team: 'PM 2, Designer 2, BE 3, iOS 4, Android 3\n(iOS 내 기여도 50%)',
                 stack: 'Swift, UIKit, MVVM, Moya, Kingfisher, Google AdMob, Amplitude',
                 desc: '장소 중심이 아닌 코스 중심의 데이트 코스 공유 서비스',
@@ -1156,7 +1160,7 @@
                     { title: '코스 상세보기', desc: '코스 미리보기, 포인트로 열람 (최초 3회 무료), 즐겨찾기, 데이트 일정 등록' }
                 ],
                 why: 'MVVM + Observable 패턴을 선택한 이유',
-                whyContent: '사용자 흐름에 따른 데이터 검증과 상태 변화 로직이 많아지면서 VC가 비대해지는 것을 방지하고자 MVVM을 채택했습니다. View/VC는 UI 렌더링과 사용자 이벤트 처리에, ViewModel은 상태 관리와 비즈니스 로직 처리에 집중하도록 했습니다.\n또한, 팀원들의 기술 숙련도와 개발 일정을 고려했을 때 RxSwift 같은 외부 라이브러리의 높은 학습 곡선보다 경량화된 Observable을 직접 구현하는 것이 효율적이라 판단했습니다.',
+                whyContent: '사용자 흐름에 따른 데이터 검증과 상태 변화 로직이 많아지면서 VC가 비대해지는 것을 방지하고자 MVVM을 채택했습니다. View/VC는 UI 렌더링과 사용자 이벤트 처리에, ViewModel은 상태 관리와 비즈니스 로직 처리에 집중하도록 했습니다.<br>또한, 팀원들의 기술 숙련도와 개발 일정을 고려했을 때 RxSwift 같은 외부 라이브러리의 높은 학습 곡선보다 경량화된 Observable을 직접 구현하는 것이 효율적이라 판단했습니다. (개인적인 RxSwift 리팩토링 진행 중)',
                 problems: [
                     {
                         label: 'Problem 1: 배너 무한 스크롤',
@@ -1164,7 +1168,7 @@
                     },
                     {
                         label: 'Solution',
-                        text: '데이터 배열 앞뒤에 더미 데이터를 추가 (예: [a,b,c,d] → [d,a,b,c,d,a])하고, visibleItemsInvalidationHandler를 활용해 스크롤 오프셋을 실시간 감지했습니다.<br>끝단 도달 시 인덱스를 이동시켜 연속성을 확보했습니다.'
+                        text: '데이터 배열 앞뒤에 더미 데이터를 추가(예: [a,b,c,d] → [d,a,b,c,d,a])하고, visibleItemsInvalidationHandler로 스크롤 오프셋을 실시간 감지했습니다.<br>끝단 도달 시 인덱스를 이동시켜 연속성을 확보했습니다.'
                     },
                     {
                         label: 'Problem 2: 대량 데이터 로딩 성능 저하',
