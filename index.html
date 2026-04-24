@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>YUN HEESEUL | Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #f3f4f6;
+            color: #1a1a1a;
+            word-break: keep-all;
+        }
+        .page-container {
+            width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 60px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 1200px;
+        }
+        .eng-font { font-family: 'Montserrat', sans-serif; }
+        .text-point { color: #FF007A; }
+        .bg-point { background-color: #FF007A; }
+        
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 900;
+            color: #000000;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title::after {
+            content: "";
+            height: 2px;
+            background-color: #000000;
+            flex-grow: 1;
+        }
+
+        .project-card {
+            border: 1px solid #e5e7eb;
+            background-color: #ffffff;
+            padding: 24px;
+        }
+
+        .tag {
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 2px;
+            background-color: #f1f5f9;
+            color: #475569;
+            display: inline-block;
+            width: fit-content;
+            white-space: nowrap;
+        }
+
+        .page-break {
+            page-break-before: always;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px dashed #e5e7eb;
+        }
+
+        .profile-img-box {
+            width: 200px;
+            height: 260px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-bottom: 6px solid #FF007A;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .profile-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .page-container { box-shadow: none; width: 100%; padding: 40px; }
+            .no-print { display: none; }
+            .page-break { border-top: none; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="page-container">
+        <!-- Header -->
+        <header class="flex justify-between items-start gap-10 mb-16">
+            <div class="flex-grow">
+                <div class="inline-block bg-point text-white text-[10px] font-black px-2 py-1 mb-4 tracking-widest uppercase italic">Tech-Based Marketer</div>
+                <h1 class="text-7xl font-900 mb-6 tracking-tighter eng-font uppercase text-black leading-none italic">BEYOND<br>CODING,<br><span class="text-point">BRANDING.</span></h1>
+                <!-- Layout tweak: slightly reduced font size to 1.15rem to keep it in one line -->
+                <p class="text-[1.15rem] font-bold text-slate-800 mb-8 leading-tight whitespace-nowrap">
+                    From an iOS developer solving user pain points with tech,<br>
+                    to a <span class="text-point">marketer, Heeseul Yun</span>, embedding brand value into lives.
+                </p>
+                <div class="flex gap-x-6 text-slate-400 font-bold text-xs uppercase tracking-wider">
+                    <span class="text-slate-900 font-black">+82 10.6305.3171</span>
+                    <span class="text-slate-900 font-black">peony491@naver.com</span>
+                </div>
+            </div>
+            <div class="flex-shrink-0">
+                <div class="profile-img-box">
+                    <img src="https://via.placeholder.com/200x260?text=PROFILE+PHOTO" alt="Heeseul Yun Profile Photo" onerror="this.src='https://via.placeholder.com/200x260?text=IMG+NOT+FOUND'">
+                </div>
+            </div>
+        </header>
+
+        <!-- Education & Certification -->
+        <section class="mb-16">
+            <h2 class="section-title text-point uppercase">Education & Certification</h2>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center border-b pb-2">
+                    <span class="text-xs font-900">Myongji University</span>
+                    <span class="text-[10px] font-bold text-slate-500">B.S. in Applied Software (Graduated)</span>
+                </div>
+                <div class="flex justify-between items-center border-b pb-2">
+                    <span class="text-xs font-900">Engineer Information Processing</span>
+                    <span class="text-[10px] font-bold text-slate-500">National Technical Qualification Holder</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perspective Shift -->
+        <section class="mb-16">
+            <h2 class="section-title text-point uppercase">Perspective Shift</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="p-5 bg-slate-50 rounded-sm border-t-2 border-black">
+                    <h4 class="text-sm font-900 mb-2 italic">01 Data-Driven UX</h4>
+                    <p class="text-[11px] text-slate-600 leading-normal font-medium">Beyond simple convenience, I <strong>identify drop-off points in the funnel</strong> proactively and design optimal user journeys to maximize conversion rates.</p>
+                </div>
+                <div class="p-5 bg-slate-50 rounded-sm border-t-2 border-black">
+                    <h4 class="text-sm font-900 mb-2 italic">02 Logical Thinking</h4>
+                    <p class="text-[11px] text-slate-600 leading-normal font-medium">I have <strong>personally handled data tools like Amplitude and GA</strong> from the development stage. I derive logical marketing strategies through objective analysis.</p>
+                </div>
+                <div class="p-5 bg-slate-50 rounded-sm border-t-2 border-black">
+                    <h4 class="text-sm font-900 mb-2 italic">03 Collaboration & Leadership</h4>
+                    <p class="text-[11px] text-slate-600 leading-normal font-medium">I learned to maximize team strengths through club activities and part lead roles. I possess <strong>professional communication skills</strong> that create synergy with other functions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Stack -->
+        <section class="mb-16">
+            <h2 class="section-title text-point uppercase">Skills & Stack</h2>
+            <div class="grid grid-cols-3 gap-8">
+                <!-- Growth & Data -->
+                <div>
+                    <p class="text-[10px] font-black text-slate-400 mb-3 uppercase italic tracking-wider">Growth & Data</p>
+                    <div class="flex flex-wrap gap-x-2 gap-y-2">
+                        <span class="tag">Amplitude</span>
+                        <span class="tag">GA4</span>
+                        <span class="tag">A.drop</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Kakao Adfit</span>
+                        <span class="tag">Google AdMob</span>
+                    </div>
+                </div>
+                <!-- Collaboration Tools -->
+                <div>
+                    <p class="text-[10px] font-black text-slate-400 mb-3 uppercase italic tracking-wider">Collaboration Tools</p>
+                    <div class="flex flex-wrap gap-x-2 gap-y-2">
+                        <span class="tag text-point font-black">Jira</span>
+                        <span class="tag text-point font-black">Confluence</span> 
+                        <span class="tag text-point font-black">Outline</span>
+                        <span class="tag text-point font-black">Linear</span>
+                        <span class="tag text-point font-black">Figma</span>
+                        <span class="tag text-point font-black">Notion</span>
+                    </div>
+                </div>
+                <!-- Technical & AI -->
+                <div>
+                    <p class="text-[10px] font-black text-slate-400 mb-3 uppercase italic tracking-wider">Technical & AI</p>
+                    <div class="flex flex-wrap gap-x-2 gap-y-2">
+                        <span class="tag">iOS (Swift)</span>
+                        <span class="tag">HTML/CSS/JS (Basic)</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">AI Prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="mb-16">
+            <h2 class="section-title text-point uppercase">Experience</h2>
+            <div class="space-y-12">
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-xs font-black text-slate-300 eng-font pt-1 italic">2025.01 — 2025.04</div>
+                    <div class="col-span-3">
+                        <h3 class="text-xl font-900 text-black">SNU Campus Town Startup Team (instamoney)</h3>
+                        <p class="text-[10px] font-black text-point mb-3 uppercase tracking-widest italic">Growth & BM Strategy Lead</p>
+                        <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                            <li class="flex gap-2"><span>•</span> <span><strong>BM Pivot Planning:</strong> Proposed shift from 'Forced SNS Restriction' to 'Incentivized Voluntary Reduction' reward structure</span></li>
+                            <li class="flex gap-2"><span>•</span> <span><strong>Revenue Optimization:</strong> Established placement strategies to maximize revenue efficiency through AdMob and Kakao Adfit integration</span></li>
+                            <li class="flex gap-2"><span>•</span> <span><strong>Data Tracking:</strong> Analyzed the reward funnel via Amplitude to identify key drop-off points and lead product improvements</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-xs font-black text-slate-300 eng-font pt-1 italic">2024.10</div>
+                    <div class="col-span-3">
+                        <h3 class="text-xl font-900 text-black">KWDC24</h3>
+                        <p class="text-[10px] font-black text-point mb-3 uppercase tracking-widest italic">Conference Volunteer</p>
+                        <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                            <li>• Supported operations for the largest iOS conference in Korea, managing attendee traffic and sessions</li>
+                            <li>• Handled global speaker relations and real-time risk response for a large-scale offline event</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-xs font-black text-slate-300 eng-font pt-1 italic">2023.09 — 2024.08</div>
+                    <div class="col-span-3">
+                        <h3 class="text-xl font-900 text-black">SOPT (IT Startup & Foundation Club)</h3>
+                        <p class="text-[10px] font-black text-point mb-3 uppercase tracking-widest italic">33rd-34th iOS Part Lead / Operation Team Member</p>
+                        <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                            <li>• Planned/Operated networking events and multiple hackathons for approximately 200 members</li>
+                            <li>• Built optimized MVP launch processes and managed technical risks as the iOS Part Lead</li>
+                            <li>• Recognized for project performance and collaborative leadership, awarded part-wide <strong>MVP</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-xs font-black text-slate-300 eng-font pt-1 italic">2023.03 — 2023.08</div>
+                    <div class="col-span-3">
+                        <h3 class="text-xl font-900 text-black">UMC (University Union Side-Project Club)</h3>
+                        <p class="text-[10px] font-black text-point mb-3 uppercase tracking-widest italic">Product Planning & Development</p>
+                        <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                            <li>• Defined features based on user pain point analysis and collaborated throughout the entire app launch process</li>
+                            <li>• Awarded <strong>Excellence in Study</strong> for high goal achievement and consistent quality of deliverables</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Projects -->
+        <section class="mb-16">
+            <h2 class="section-title text-point uppercase">Projects</h2>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="project-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-900 italic text-black">DateRoad</h3>
+                        <span class="text-[9px] font-black bg-black text-white px-2 py-0.5">Grand Prize</span>
+                    </div>
+                    <p class="text-[10px] font-black text-point mb-2 uppercase italic">Active Users 1400+</p>
+                    <p class="text-[11px] text-slate-600 font-semibold mb-4 leading-relaxed"><strong>Course-centric date sharing service (rather than location-based).<br></strong>UX optimization based on data. Reduced churn significantly by <strong>visualizing the loading journey</strong> to decrease perceived wait time.</p>
+                    <div class="flex flex-wrap gap-2"><span class="tag">Conversion Optimization</span> <span class="tag">Amplitude</span></div>
+                </div>
+                <div class="project-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-900 italic text-black">doorip</h3>
+                        <span class="text-[9px] font-black bg-black text-white px-2 py-0.5">Grand Prize</span>
+                    </div>
+                    <p class="text-[10px] font-black text-point mb-2 uppercase italic">Active Users 2300+</p>
+                    <p class="text-[11px] text-slate-600 font-semibold mb-4 leading-relaxed"><strong>Collaborative travel To-Do service.<br></strong> Planned an image-saving feature to increase the sharing value of travel preference diagnosis, driving organic user inflow.</p>
+                    <div class="flex flex-wrap gap-2"><span class="tag">Viral Loop</span> <span class="tag">Growth Strategy</span></div>
+                </div>
+                <div class="project-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-900 italic text-black">MyIcecreamBox</h3>
+                        <span class="text-[9px] font-black bg-slate-400 text-white px-2 py-0.5 italic">Planner & Dev</span>
+                    </div>
+                    <p class="text-[10px] font-black text-point mb-2 uppercase italic">Planning & Viral Design</p>
+                    <p class="text-[11px] text-slate-600 font-semibold mb-4 leading-relaxed"><strong>Interactive message exchange service with virtual ice cream.<br></strong> Participated in <strong>core planning</strong>. Designed interactive elements to trigger user sharing behavior.</p>
+                    <div class="flex flex-wrap gap-2"><span class="tag">Brand Concept</span> <span class="tag">Interaction Design</span></div>
+                </div>
+                <div class="project-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-900 italic text-black mb-4">MyU</h3>
+                        <span class="text-[9px] font-black bg-slate-400 text-white px-2 py-0.5 italic">Planner & Dev</span>
+                    </div>
+                    <p class="text-[10px] font-black text-point mb-2 uppercase italic">Target User Research</p>
+                    <p class="text-[11px] text-slate-600 font-semibold mb-4 leading-relaxed"><strong>Service for a smooth and enjoyable campus life.<br></strong> Planned core service values through target inflow hypotheses. Managed the project as a lead.</p>
+                    <div class="flex flex-wrap gap-2"><span class="tag">Insight Discovery</span> <span class="tag">Product Market Fit</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center pt-10 border-t-4 border-black">
+            <h2 class="text-3xl font-900 italic text-black mb-3 uppercase tracking-tighter">LET'S MARKET TOGETHER.</h2>
+            <p class="text-point font-black text-[11px] italic uppercase tracking-[0.5em] mb-4">Analyzing data, Executing Technology, Designing Experiences.</p>
+            <p class="text-slate-400 font-bold text-[9px] uppercase tracking-widest italic">© 2026 YUN HEESEUL / TECH-DRIVEN MARKETER</p>
+        </footer>
+    </div>
+
+</body>
+</html>
