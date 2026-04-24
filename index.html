@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>YUN HEESEUL | Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #f3f4f6;
+            color: #1a1a1a;
+            word-break: keep-all;
+        }
+        .page-container {
+            width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 60px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 1200px;
+        }
+        .eng-font { font-family: 'Montserrat', sans-serif; }
+        .text-point { color: #FF007A; }
+        .bg-point { background-color: #FF007A; }
+        
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 900;
+            color: #000000;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title::after {
+            content: "";
+            height: 2px;
+            background-color: #000000;
+            flex-grow: 1;
+        }
+
+        .project-card {
+            border: 1px solid #e5e7eb;
+            background-color: #ffffff;
+            padding: 24px;
+        }
+
+        .tag {
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 2px;
+            background-color: #f1f5f9;
+            color: #475569;
+        }
+
+        .page-break {
+            page-break-before: always;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px dashed #e5e7eb;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .page-container { box-shadow: none; width: 100%; padding: 40px; }
+            .no-print { display: none; }
+            .page-break { border-top: none; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="page-container">
+        <!-- Header -->
+        <header class="flex justify-between items-start gap-10 mb-16">
+            <div class="flex-grow">
+                <div class="inline-block bg-point text-white text-[10px] font-black px-2 py-1 mb-4 tracking-widest uppercase italic">Tech-Based Marketer</div>
+                <h1 class="text-7xl font-900 mb-6 tracking-tighter eng-font uppercase text-black leading-none italic">BEYOND<br>CODING,<br><span class="text-point">BRANDING.</span></h1>
+                <p class="text-xl font-bold text-slate-800 mb-8 leading-tight">
+                    사용자의 불편을 기술로 해결하던 iOS 개발자에서,<br>
+                    브랜드의 가치를 유저의 삶에 심는 <span class="text-point">마케터 윤희슬</span>입니다.
+                </p>
+                <div class="flex gap-x-6 text-slate-400 font-bold text-xs uppercase tracking-wider">
+                    <span class="text-slate-900 font-black">010.6305.3171</span>
+                    <span class="text-slate-900 font-black">peony491@naver.com</span>
+                    <a href="https://heeseul.vercel.app/" target="_blank" class="text-point hover:underline italic">Portfolio</a>
+                </div>
+            </div>
+            <div class="flex-shrink-0">
+                <div class="w-40 h-52 bg-slate-100 rounded-sm overflow-hidden border-b-4 border-point grayscale flex items-center justify-center">
+                    <div class="text-slate-300 font-black text-[10px] tracking-tighter text-center px-4 uppercase italic">Profile Photo</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Intro (Perspective Shift) -->
+        <section class="mb-16">
+            <h2 class="section-title text-point uppercase">Perspective Shift</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <!-- 01 -->
+                <div class="p-5 bg-slate-50 rounded-sm border-t-2 border-black">
+                    <h4 class="text-sm font-900 mb-2 italic">01 Data-Driven UX</h4>
+                    <p class="text-[11px] text-slate-600 leading-normal font-medium">단순한 편의를 넘어, <strong>퍼널 내 이탈 요인을 선제적으로 파악</strong>하고 전환율을 극대화하기 위한 최적의 유저 여정을 설계합니다.</p>
+                </div>
+                <!-- 02 -->
+                <div class="p-5 bg-slate-50 rounded-sm border-t-2 border-black">
+                    <h4 class="text-sm font-900 mb-2 italic">02 Logical Thinking</h4>
+                    <p class="text-[11px] text-slate-600 leading-normal font-medium"><strong>Amplitude, GA 등 데이터 분석 툴을 개발 단계부터 직접</strong> 다뤄봤습니다.<br> 수치를 통해 유저의 반응을 객관적으로 분석하여 논리적인 마케팅 전략을 도출합니다.</p>
+                </div>
+                <!-- 03 -->
+                <div class="p-5 bg-slate-50 rounded-sm border-t-2 border-black">
+                    <h4 class="text-sm font-900 mb-2 italic">03 Collaboration & Leadership</h4>
+                    <p class="text-[11px] text-slate-600 leading-normal font-medium">동아리 활동과 프로젝트 파트 리드 경험을 통해 팀의 강점을 극대화하는 법을 배웠습니다.<br> <strong>타 직군과의 시너지를 만드는 전문적인 소통 능력</strong>을 갖췄습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="mb-16">
+            <h2 class="section-title text-point uppercase">Experience</h2>
+            <div class="space-y-12">
+                <!-- 창업팀 -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-xs font-black text-slate-300 eng-font pt-1 italic">2025.01 — 2025.04</div>
+                    <div class="col-span-3">
+                        <h3 class="text-xl font-900 text-black">서울대학교 캠퍼스타운 입주 창업 팀 (instamoney)</h3>
+                        <p class="text-[10px] font-black text-point mb-3 uppercase tracking-widest italic">Growth & BM Strategy Lead</p>
+                        <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                            <li class="flex gap-2"><span>•</span> <span><strong>BM 전환 기획:</strong> 유저 저항이 큰 'SNS 강제 제한'에서 '자발적 사용 감소 보상' 구조로 전환 제안</span></li>
+                            <li class="flex gap-2"><span>•</span> <span><strong>수익 모델 최적화:</strong> AdMob 및 Kakao Adfit 연동을 통해 광고 노출 대비 수익 효율을 극대화하는 배치 전략 수립</span></li>
+                            <li class="flex gap-2"><span>•</span> <span><strong>데이터 트래킹:</strong> Amplitude로 보상 수령 퍼널을 분석하여 주요 이탈 지점 확인 및 소구점 개선 작업 주도</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- KWDC24 -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-xs font-black text-slate-300 eng-font pt-1 italic">2024.10</div>
+                    <div class="col-span-3">
+                        <h3 class="text-xl font-900 text-black">KWDC24</h3>
+                        <p class="text-[10px] font-black text-point mb-3 uppercase tracking-widest italic">Conference Volunteer</p>
+                        <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                            <li>• 국내 최대 iOS 컨퍼런스 운영 지원 및 참가자 동선 및 세션 관리</li>
+                            <li>• 글로벌 스피커 응대 및 대규모 오프라인 행사의 실시간 리스크 대응</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SOPT -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-xs font-black text-slate-300 eng-font pt-1 italic">2023.09 — 2024.08</div>
+                    <div class="col-span-3">
+                        <h3 class="text-xl font-900 text-black">SOPT (IT 창업 연합 동아리)</h3>
+                        <p class="text-[10px] font-black text-point mb-3 uppercase tracking-widest italic">33-34기 iOS Part Lead / Operation Team Member</p>
+                        <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                            <li>• 약 200명 규모의 동아리 내 네트워킹 행사 및 다수의 해커톤 기획·운영</li>
+                            <li>• iOS 파트 리드로서 기술적 리스크 매니지먼트 및 최적화된 MVP 출시 프로세스 구축</li>
+                            <li>• 프로젝트 성과 및 협업 능력을 인정받아 파트 전체 <strong>MVP</strong> 선정</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- UMC -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-xs font-black text-slate-300 eng-font pt-1 italic">2023.03 — 2023.08</div>
+                    <div class="col-span-3">
+                        <h3 class="text-xl font-900 text-black">UMC (대학생 연합 사이드 프로젝트 동아리)</h3>
+                        <p class="text-[10px] font-black text-point mb-3 uppercase tracking-widest italic">Product Planning & Development</p>
+                        <ul class="space-y-2 text-xs font-semibold text-slate-700">
+                            <li>• 사용자 페인 포인트 분석 기반의 기능 정의 및 앱 런칭 전 과정 협업</li>
+                            <li>• 높은 목표 달성률과 성실한 결과물 퀄리티를 통해 <strong>스터디 우수상</strong> 수상</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page Break -->
+        <div class="page-break"></div>
+
+        <!-- Selected Projects -->
+        <section class="mb-16">
+            <h2 class="section-title text-point uppercase">Projects</h2>
+            <div class="grid grid-cols-2 gap-6">
+                <!-- DateRoad -->
+                <div class="project-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-900 italic text-black">데이트로드 (DateRoad)</h3>
+                        <span class="text-[9px] font-black bg-black text-white px-2 py-0.5">최우수상</span>
+                    </div>
+                    <p class="text-[10px] font-black text-point mb-2 uppercase italic">Active Users 1400+</p>
+                    <p class="text-[11px] text-slate-600 font-semibold mb-4 leading-relaxed"><strong>장소 중심이 아닌 코스 중심의 데이트 코스 공유 서비스<br></strong>데이터 기반 UX 최적화. <strong>로딩 여정 시각화</strong>를 통해 체감 대기 시간을 줄여 이탈률을 획기적으로 개선.</p>
+                    <div class="flex flex-wrap gap-1"><span class="tag">Conversion Optimization</span> <span class="tag">Amplitude</span></div>
+                </div>
+                <!-- doorip -->
+                <div class="project-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-900 italic text-black">doorip (두립)</h3>
+                        <span class="text-[9px] font-black bg-black text-white px-2 py-0.5">대상</span>
+                    </div>
+                    <p class="text-[10px] font-black text-point mb-2 uppercase italic">Active Users 2300+</p>
+                    <p class="text-[11px] text-slate-600 font-semibold mb-4 leading-relaxed"><strong>함께 완성하는 여행 할 일 서비스<br></strong> 여행 취향 진단 결과의 공유 가치를 높이는 이미지 소장 기능을 기획하여 유입 유도.</p>
+                    <div class="flex flex-wrap gap-1"><span class="tag">Viral Loop</span> <span class="tag">Growth Strategy</span></div>
+                </div>
+                <!-- MyIcecreamBox -->
+                <div class="project-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-900 italic text-black">MyIcecreamBox</h3>
+                        <span class="text-[9px] font-black bg-slate-400 text-white px-2 py-0.5 italic">Planner & Dev</span>
+                    </div>
+                    <p class="text-[10px] font-black text-point mb-2 uppercase italic">Planning & Viral Design</p>
+                    <p class="text-[11px] text-slate-600 font-semibold mb-4 leading-relaxed"><strong>아이스크림과 함께 메세지를 주고 받을 수 있는 서비스<br></strong>단순 개발을 넘어 <strong>핵심 기획</strong> 참여. 유저 공유 욕구를 자극하는 인터랙티브 요소 설계.</p>
+                    <div class="flex flex-wrap gap-1"><span class="tag">Brand Concept</span> <span class="tag">Interaction Design</span></div>
+                </div>
+                <!-- MyU -->
+                <div class="project-card">
+                    <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-lg font-900 italic text-black mb-4">MyU</h3>
+                    <span class="text-[9px] font-black bg-slate-400 text-white px-2 py-0.5 italic">Planner & Dev</span>
+                    </div>
+                    <p class="text-[10px] font-black text-point mb-2 uppercase italic">Target User Research</p>
+                    <p class="text-[11px] text-slate-600 font-semibold mb-4 leading-relaxed"><strong>교내 학생들의 즐겁고 원만한 학교 생활을 돕는 서비스<br></strong>타겟 유입 가설 수립을 통한 서비스 핵심 가치 기획. 리드로서 프로젝트 운영.</p>
+                    <div class="flex flex-wrap gap-1"><span class="tag">Insight Discovery</span> <span class="tag">Product Market Fit</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Education -->
+        <section class="grid grid-cols-2 gap-12 mb-16">
+            <div>
+                <h2 class="section-title text-point uppercase">Skills & Stack</h2>
+                <div class="space-y-5">
+                    <div>
+                        <p class="text-[10px] font-black text-slate-400 mb-2 uppercase italic">Growth & Data</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Amplitude</span> <span class="tag">Google Analytics</span> <span class="tag">Firebase</span> <span class="tag">AdMob</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-slate-400 mb-2 uppercase italic">Collaboration Tools</p>
+                        <div class="flex flex-wrap gap-2">
+                                                        <span class="tag text-point font-black">Jira</span> <span class="tag text-point font-black">Confluence</span> <span class="tag text-point font-black">Outline</span> <span class="tag text-point font-black">Linear</span>
+                            <span class="tag text-point font-black">Figma</span> <span class="tag text-point font-black">Notion</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-slate-400 mb-2 uppercase italic">Technical & AI</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">iOS (Swift)</span> <span class="tag">HTML/CSS/JS</span> <span class="tag">Git</span> <span class="tag">AI Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="section-title text-point uppercase">Education</h2>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <span class="text-xs font-900">명지대학교</span>
+                        <span class="text-[10px] font-bold text-slate-500">응용소프트웨어전공 (졸업)</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b pb-2">
+                        <span class="text-xs font-900">정보처리기사</span>
+                        <span class="text-[10px] font-bold text-slate-500">국가기술자격 보유</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center pt-10 border-t-4 border-black">
+            <h2 class="text-3xl font-900 italic text-black mb-3 uppercase tracking-tighter">LET'S MARKET TOGETHER.</h2>
+            <p class="text-point font-black text-[11px] italic uppercase tracking-[0.5em] mb-4">Analyzing data, Executing Technology, Designing Experiences.</p>
+            <p class="text-slate-400 font-bold text-[9px] uppercase tracking-widest italic">© 2026 YUN HEESEUL / TECH-DRIVEN MARKETER</p>
+        </footer>
+    </div>
+
+</body>
+</html>
