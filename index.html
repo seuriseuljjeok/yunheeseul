@@ -64,6 +64,25 @@
             border-top: 1px dashed #e5e7eb;
         }
 
+        /* Profile Image Container */
+        .profile-img-box {
+            width: 300px; /* 기존보다 사이즈 확대 */
+            height: 390px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-bottom: 6px solid #FF007A;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .profile-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         @media print {
             body { background: white; padding: 0; }
             .page-container { box-shadow: none; width: 100%; padding: 40px; }
@@ -87,11 +106,13 @@
                 <div class="flex gap-x-6 text-slate-400 font-bold text-xs uppercase tracking-wider">
                     <span class="text-slate-900 font-black">010.6305.3171</span>
                     <span class="text-slate-900 font-black">peony491@naver.com</span>
+                    <a href="https://heeseul.vercel.app/" target="_blank" class="text-point hover:underline italic">Portfolio</a>
                 </div>
             </div>
             <div class="flex-shrink-0">
-                <div class="w-40 h-52 bg-slate-100 rounded-sm overflow-hidden border-b-4 border-point grayscale flex items-center justify-center">
-                    <div class="text-slate-300 font-black text-[10px] tracking-tighter text-center px-4 uppercase italic">Profile Photo</div>
+                <!-- 이미지 경로 수정: src="사진파일경로" 를 입력하세요 -->
+                <div class="profile-img-box">
+                    <img src="https://via.placeholder.com/200x260?text=PROFILE+PHOTO" alt="윤희슬 프로필 사진" onerror="this.src='https://via.placeholder.com/200x260?text=IMG+NOT+FOUND'">
                 </div>
             </div>
         </header>
@@ -218,8 +239,8 @@
                 <!-- MyU -->
                 <div class="project-card">
                     <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-lg font-900 italic text-black mb-4">MyU</h3>
-                    <span class="text-[9px] font-black bg-slate-400 text-white px-2 py-0.5 italic">Planner & Dev</span>
+                        <h3 class="text-lg font-900 italic text-black mb-4">MyU</h3>
+                        <span class="text-[9px] font-black bg-slate-400 text-white px-2 py-0.5 italic">Planner & Dev</span>
                     </div>
                     <p class="text-[10px] font-black text-point mb-2 uppercase italic">Target User Research</p>
                     <p class="text-[11px] text-slate-600 font-semibold mb-4 leading-relaxed"><strong>교내 학생들의 즐겁고 원만한 학교 생활을 돕는 서비스<br></strong>타겟 유입 가설 수립을 통한 서비스 핵심 가치 기획. 리드로서 프로젝트 운영.</p>
@@ -242,7 +263,7 @@
                     <div>
                         <p class="text-[10px] font-black text-slate-400 mb-2 uppercase italic">Collaboration Tools</p>
                         <div class="flex flex-wrap gap-2">
-                                                        <span class="tag text-point font-black">Jira</span> <span class="tag text-point font-black">Confluence</span> <span class="tag text-point font-black">Outline</span> <span class="tag text-point font-black">Linear</span>
+                            <span class="tag text-point font-black">Jira</span> <span class="tag text-point font-black">Confluence</span> <span class="tag text-point font-black">Outline</span> <span class="tag text-point font-black">Linear</span>
                             <span class="tag text-point font-black">Figma</span> <span class="tag text-point font-black">Notion</span>
                         </div>
                     </div>
