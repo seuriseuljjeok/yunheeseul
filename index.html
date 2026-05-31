@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yun Heeseul · Product Designer Portfolio</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+  :root {
+    --bg: #FBFAF7;
+    --ink: #161513;
+    --ink-2: #2D2A25;
+    --muted: #8A857C;
+    --rule: #E3DDD0;
+    --accent: #E85C18;
+    --maxw: 920px;
+    --gutter: 80px;
+    --sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.65;
+    font-size: 16px;
+    letter-spacing: -0.011em;
+    word-break: keep-all;
+  }
+  ::selection { background: var(--accent); color: #fff; }
+
+  .page {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 112px var(--gutter) 96px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .pn {
+    position: absolute;
+    bottom: 48px;
+    left: var(--gutter);
+    right: var(--gutter);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .display {
+    font-size: clamp(40px, 5.2vw, 64px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -0.032em;
+    margin: 0;
+  }
+  .display em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .meta {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .lead {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-2);
+    max-width: 720px;
+  }
+  strong { color: var(--ink); font-weight: 600; }
+
+  /* ============= COVER ============= */
+  .cover { justify-content: space-between; gap: 40px; }
+  .cover .top { font-size: 13px; color: var(--muted); }
+  .cover .center { display: flex; flex-direction: column; gap: 28px; }
+  .cover .center .display { font-size: clamp(44px, 6vw, 76px); line-height: 1.05; }
+  .cover .bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px 32px;
+    font-size: 13.5px;
+    color: var(--muted);
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .cover .bottom strong { color: var(--ink); font-weight: 500; }
+
+  /* ============= ABOUT ============= */
+  .about .display { margin-bottom: 40px; }
+  .about .lead { margin-bottom: 80px; }
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+  }
+  .pillar h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+  .pillar p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  /* ============= CASE ============= */
+  .case .meta { margin-bottom: 20px; }
+  .case .display { margin-bottom: 28px; max-width: 760px; }
+  .case .lead { margin-bottom: 56px; }
+
+  /* Each section is its own grid with a single full-width border-top.
+     This is the fix — borders are no longer broken by the inner gap. */
+  .section {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 48px;
+    padding: 26px 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+  .section:last-child { border-bottom: 1px solid var(--rule); }
+  .section .label {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.5;
+    padding-top: 4px;
+  }
+  .section .body p + p { margin-top: 12px; }
+
+  /* ============= SKILLS ============= */
+  .skills .display { margin-bottom: 56px; }
+  .skill-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    padding: 22px 0;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+  .skill-row:last-of-type { border-bottom: 1px solid var(--rule); }
+  .skill-row .cat {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    padding-top: 2px;
+  }
+  .skill-row .items {
+    font-size: 15.5px;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .skill-row .items em {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .contact {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid var(--ink);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    font-size: 14px;
+  }
+  .contact .label {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+  .contact .value {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ============= Responsive ============= */
+  @media (max-width: 760px) {
+    :root { --gutter: 28px; }
+    .page { padding: 64px var(--gutter); min-height: auto; }
+    .pn { position: static; margin-top: 48px; }
+    .pillars { grid-template-columns: 1fr; gap: 28px; }
+    .section { grid-template-columns: 1fr; gap: 8px; padding: 22px 0; }
+    .section .label { padding-top: 0; }
+    .skill-row { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }
+    .contact { grid-template-columns: 1fr; gap: 16px; }
+    .cover .bottom { flex-direction: column; gap: 12px; }
+    .display { letter-spacing: -0.025em; }
+  }
+
+  /* ============= Print A4 ============= */
+  @page { size: A4; margin: 0; }
+  @media print {
+    :root { --gutter: 48px; }
+    html, body { background: var(--bg); font-size: 12px; }
+    .page {
+      min-height: 297mm;
+      padding: 56px var(--gutter) 48px;
+      page-break-after: always;
+      max-width: 210mm;
+      width: 210mm;
+    }
+    .page:last-child { page-break-after: auto; }
+    .display { font-size: 36px; line-height: 1.08; }
+    .cover .center .display { font-size: 40px; }
+    .about .display, .skills .display { font-size: 36px; }
+    .case .display { font-size: 32px; margin-bottom: 20px; }
+    .case .lead { margin-bottom: 28px; font-size: 13.5px; }
+    .lead { font-size: 13.5px; }
+    p { font-size: 12.5px; line-height: 1.65; }
+    .section { padding: 16px 0; grid-template-columns: 110px 1fr; gap: 32px; break-inside: avoid; }
+    .section .label { font-size: 9.5px; }
+    .skills .display { margin-bottom: 36px; }
+    .skill-row { padding: 14px 0; grid-template-columns: 160px 1fr; gap: 32px; }
+    .pillars { gap: 28px; padding-top: 24px; }
+    .pillar p { font-size: 12px; }
+    .about .display { margin-bottom: 28px; }
+    .about .lead { margin-bottom: 48px; }
+    .contact { margin-top: 48px; padding-top: 20px; font-size: 12px; }
+    .pn { bottom: 28px; font-size: 10px; }
+    .cover .bottom { font-size: 12px; padding-top: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 01 · Cover -->
+<section class="page cover">
+  <div class="top">Portfolio · 2026</div>
+
+  <div class="center">
+    <p class="meta">Yun Heeseul · Product Designer</p>
+    <h1 class="display">
+      코드를 다뤄본 손으로,<br/>
+      문제의 본질을<br/>
+      <em>설계합니다.</em>
+    </h1>
+    <p class="lead">
+      iOS로 앱을 직접 만들고 출시한 개발자에서,
+      이제는 화면 너머의 문제를 정의하고, 데이터로 결정하는 프로덕트 디자이너로.
+    </p>
+  </div>
+
+  <div class="bottom">
+    <div>윤희슬</div>
+    <div>명지대 응용소프트웨어 전공</div>
+    <div>정보처리기사 보유</div>
+  </div>
+
+  <div class="pn"><span>01</span><span>Cover</span></div>
+</section>
+
+<!-- 02 · About -->
+<section class="page about">
+  <p class="meta">About</p>
+  <h2 class="display">개발 경험을 가진,<br/>데이터로 의사결정하는 디자이너.</h2>
+
+  <p class="lead">
+    iOS로 세 개 이상의 앱을 출시하고 유지보수한 개발자 경험을 바탕으로 프로덕트 디자인으로 시야를 넓히고자 합니다.
+    Amplitude로 사용자 행동을 직접 트래킹하고 직접 구현해본 경험 덕분에, 데이터·디자인·구현을 하나의 흐름으로 사고합니다.
+  </p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <h3>데이터로 문제를 정의</h3>
+      <p>Amplitude·GA를 개발 단계부터 직접 연동·트래킹하며, 퍼널 이탈 지점을 근거로 디자인 개선을 제안했습니다.</p>
+    </div>
+    <div class="pillar">
+      <h3>출시까지 가는 실행력</h3>
+      <p>iOS로 세 개의 서비스를 출시했습니다. 디자인 결정이 실제 코드·제약·일정 위에서 어떻게 작동하는지 압니다.</p>
+    </div>
+    <div class="pillar">
+      <h3>다직군과의 협업</h3>
+      <p>여러 팀프로젝트에서 파트 리드로서 협업을 이끌어왔습니다. 타직군과 같은 언어로 협업합니다. <br>연합 개발 동아리의 운영팀원으로서 약 200명 규모 행사를 기획·운영한 경험이 있습니다.</p>
+    </div>
+  </div>
+
+  <div class="pn"><span>02</span><span>About</span></div>
+</section>
+
+<!-- 03 · Case 01 · 데이트로드 -->
+<section class="page case">
+  <p class="meta">데이트로드 · 2024.07–2024.11 · iOS 파트 리드 · 동아리 팀 프로젝트 · Active Users 2,400+ · 데모데이 최우수상</p>
+  <h2 class="display">기다림을 줄이는 대신,<br/><em>보이게</em> 만들었다.</h2>
+  <p class="lead">
+    장소가 아닌 코스 중심의 데이트 코스 공유 서비스<br>
+    iOS 파트 리드로 다른 직군과 협업해 출시까지 책임진 동아리 팀 프로젝트에서,
+    빈 화면으로 노출되던 메인 로딩 구간을 <strong>스켈레톤 뷰 + 로딩 인디케이터</strong>의 노출 규칙으로 새로 설계해 출시까지 반영
+  </p>
+
+  <div class="section">
+    <div class="label">문제 정의</div>
+    <div class="body">
+      <p>메인 화면에서 다량의 데이터를 불러오는 동안 화면이 빈 상태로 노출되고 있던 상황<br>
+        사용자 입장에서는 앱이 멈춘 것처럼 보일 수 있는 순간 — 같은 시간이라도 <strong>진행 상태가 보이지 않으면 사용자가 "고장"으로 읽고 떠난다</strong>는 가설로 문제 정의.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">접근 방식</div>
+    <div class="body">
+      <p>첫 안은 스켈레톤 뷰와 로딩 프로그레스를 동시에 노출하는 방식<br>
+        그러나 모든 상황에서 둘을 함께 보여주면 잠깐 스치는 데이터 변경에서도 사용자 흐름이 끊길 수 있다는 점을 인지하고, 노출 규칙을 단계로 나눠 설계</p>
+      <p>즉, <strong>첫 데이터 로딩에서는 스켈레톤 + 로딩 인디케이터를 함께 노출</strong>해 빈 화면 문제를 해결하고, 이후 데이터 변경 시에는 <strong>로딩 인디케이터만 노출</strong>해 답답함 없이 데이터가 갱신되고 있음을 알리는 방향</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">해결 과정</div>
+    <div class="body">
+      <p>개발 환경에서 기본 제공하는 스켈레톤이 메인 뷰의 레이아웃과 맞지 않아, Figma로 <strong>메인 뷰의 레이아웃에 정확히 맞춘 스켈레톤을 직접 커스텀 디자인</strong>함</p>
+      <p>디자인 시안만 전달하는 데서 멈추지 않고, iOS 단까지 <strong>직접 구현해 작동하는 형태로 팀에 시연</strong>함으로써 팀의 의사결정을 도움</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">결과</div>
+    <div class="body">
+      <p>제안이 그대로 반영되어 출시. 베타 테스터와 동아리 데모데이 시연에서 로딩 UX에 대한 긍정적 피드백을 획득.<br> 
+        Active Users 2,400+ 달성, 데모데이 최우수상 수상</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">역할 · 협업</div>
+    <div class="body">
+      <p>리드로서 전반적인 팀 관리와 이슈 해결을 책임짐<br> 
+        이 외에도 문제 발견 → 노출 규칙 설계 → Figma 커스텀 → iOS 구현 → 작동 시연까지 본인이 주도했으며, 시안이 아닌 작동하는 결과물로 팀의 의사결정을 끌어냄</p>
+    </div>
+  </div>
+
+  <div class="pn"><span>03</span><span>Case 01 · 데이트로드</span></div>
+</section>
+
+<!-- 04 · Case 02 · instamoney -->
+<section class="page case">
+  <p class="meta">instamoney · 2025.01–2025.04 · iOS 1인 개발 · 서울대 캠퍼스타운 입주 창업팀</p>
+  <h2 class="display">막는 구조에서,<br/><em>보상하는</em> 구조로.</h2>
+  <p class="lead">
+    SNS 사용을 줄이도록 돕는 앱테크 서비스<br>
+    창업팀에서 iOS를 단독으로 맡아 디자인 구현부터 광고 연동, 푸시까지 한 사이클을 직접 책임
+  </p>
+
+  <div class="section">
+    <div class="label">문제 정의</div>
+    <div class="body">
+      <p>초기 모델은 'SNS 강제 제한'이었으나, 강제는 사용자 저항을 부르고 결국 앱을 떠나게 만든다는 점에서 <strong>통제 구조 자체가 리텐션의 적</strong>이라는 문제 정의</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">접근 방식</div>
+    <div class="body">
+      <p>표면 기능을 손보는 대신, 행동을 막는 구조 자체를 의심하고 사용자가 스스로 선택할 수 있는 동기 구조로 재설계할 것을 제안<br> 
+        BM 단의 변화이지만, 결국 사용자가 제품과 어떤 관계를 맺는가의 문제로 인식</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">해결 과정</div>
+    <div class="body">
+      <p>'강제 제한'을 <strong>'자발적 사용 감소에 대한 보상'</strong>으로 BM 전환 제안<br> 
+        출시 후 Amplitude로 보상 수령 퍼널을 분석해 주요 이탈 지점을 확인하고 개선 작업 주도</p>
+      <p>동시에 AdMob·Kakao Adfit 광고 배치 전략과 FCM 푸시 권한 처리까지 직접 구현해, 가설을 실제 서비스로 출시·검증</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">결과</div>
+    <div class="body">
+      <p>1인 환경에서 설계 → 구현 → 출시 → 데이터 검증 → 개선의 사이클을 모두 책임진 경험<br> 
+        표면 기능이 아니라 사용자의 동기·행동 구조 자체를 다시 설계한 결정</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">역할 · 협업</div>
+    <div class="body">
+      <p>창업팀의 1인 iOS 개발자<br> 
+        팀에 BM 전환을 제안하고 의사결정 과정에 참여한 뒤, 합의된 방향을 iOS로 단독 구현·출시·검증까지 책임짐</p>
+    </div>
+  </div>
+
+  <div class="pn"><span>04</span><span>Case 02 · instamoney</span></div>
+</section>
+
+<!-- 05 · Case 03 · doorip -->
+<section class="page case">
+  <p class="meta">doorip · 2023.12–2024.02 · iOS 개발자 · 첫 iOS 팀 프로젝트 · Active Users 1,300+ · 데모데이 대상</p>
+  <h2 class="display">단순 공유 버튼이 아닌,<br/><em>갖고 싶은 결과</em>를 만들었다.</h2>
+  <p class="lead">
+    함께 완성하는 여행 할 일 서비스<br>
+    첫 iOS 팀 프로젝트로 다른 직군과 협업하며 출시까지 진행
+  </p>
+
+  <div class="section">
+    <div class="label">문제 정의</div>
+    <div class="body">
+      <p>여행 준비는 본질적으로 '함께' 하는 행동이지만, 여행 스타일 진단 결과·할 일 계획이 한 사용자 안에 갇히면 서비스가 자연스럽게 퍼지지 않음. <strong>"이 결과를 남에게 보여주고 싶다"</strong>는 욕구를 어떻게 자연스러운 공유로 흐르게 할 것인가가 핵심 질문</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">접근 방식</div>
+    <div class="body">
+      <p>강요된 공유 버튼 대신, 결과물 자체가 공유의 동력이 되는 구조를 만드는 방식으로 접근. <br>
+        사용자가 <strong>갖고 싶어지는 결과 이미지</strong>가 있다면 공유는 자연스레 일어난다는 가설</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">해결 과정</div>
+    <div class="body">
+      <p>여행 취향 진단 결과를 소장·공유하고 싶은 이미지로 만드는 기능을 제안해, 사용자가 자발적으로 결과를 퍼뜨리며 새 유저를 데려오는 흐름 설계.</p>
+      <p>동시에 레이아웃 변경 시 자연스러운 애니메이션을 직접 구현해 함께 쓰는 화면의 완성도를 높임</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">결과</div>
+    <div class="body">
+      <p>사람과 사람을 잇는 경험 설계가 서비스의 강력한 성장 엔진이 된다는 걸 직접 확인<br>
+        Active Users 1,300+, 동아리 데모데이 대상
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">역할 · 협업</div>
+    <div class="body">
+      <p>iOS 개발자로 팀에 참여하며 다른 직군과 협업해 기획 의도를 iOS에서 충실히 구현하고, 디테일까지 마무리하는 데 집중<br>
+        개발 외에도 사용자 경험 향상을 위한 아이디어 제안이나 피드백 등 타직군과 적극적인 소통 진행
+      </p>
+    </div>
+  </div>
+
+  <div class="pn"><span>05</span><span>Case 03 · doorip</span></div>
+</section>
+
+<!-- 06 · Skills & Contact -->
+<section class="page skills">
+  <p class="meta">Skills · Contact</p>
+  <h2 class="display">디자인, 데이터, 코드.</h2>
+
+  <div class="skill-row">
+    <div class="cat">Skill</div>
+    <div class="items">Figma · Swift · UIKit · SwiftUI · HTML / CSS / JS</div>
+  </div>
+  <div class="skill-row">
+    <div class="cat">Research & Data</div>
+    <div class="items"><em>Amplitude</em> · Google Analytics</div>
+  </div>
+  <div class="skill-row">
+    <div class="cat">Collaboration</div>
+    <div class="items">Notion · Slack · Jira · Confluence · Linear · Git</div>
+  </div>
+  <div class="skill-row">
+    <div class="cat">Experience</div>
+    <div class="items">· 전국 대학생 연합 IT 창업 동아리 SOPT 33-34기 iOS 파트 & 운영팀원<br> · 약 4개월 간 창업 팀 근무 (iOS 개발자)<br> · (주)포토위젯 2개월 인턴 (iOS 개발자)</div>
+  </div>
+
+  <div class="contact">
+    <div><span class="label">Name</span><span class="value">윤희슬 Yun Heeseul</span></div>
+    <div><span class="label">Contact</span><span class="value">peony491@naver.com · 010-6305-3171</span></div>
+  </div>
+
+  <div class="pn"><span>06</span><span>Skills · End</span></div>
+</section>
+
+</body>
+</html>
